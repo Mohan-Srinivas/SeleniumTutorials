@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Test Suite" verbose="1" parallel="methods" thread-count="2">
+<!--	<listeners>
+			<listener class-name="testNG.TestListenersWithAnnotationTransformer"/> 	
+	</listeners>
+	<parameter name="Name" value="Srinivasan"></parameter>
+	<parameter name="CName" value="Cricbuzz"></parameter> -->
+
+	<test name="Test Cases">
+	<!--	  <groups>
+					<run>
+						<include name="Google"/>
+						<include name="Vivo"/>
+						<exclude name="Apple"/> 
+						<exclude name="Bing"/> 
+				</run>
+			</groups> 
+	-->
+		<classes>
+	<!--		<class name="testNG.SampleTestCase"></class> -->
+			<class name="testNG.ExampleForParallelTesting"/>
+			<methods>
+				<exclude name="secondTestCase"/>
+			</methods>
+		</classes>
+	</test>
+</suite>
+
+
+
+
+		<!-- 
+		<class name="testNG.ParameterizationExample"></class>
+			<class name="testNG.DependenciesManagement"></class>
+			<class name="testNG.DriverACar"></class>
+			<class name="testNG.SampleTestCase"></class>
+			<class name="testNG.SkipTestCase"></class>
+			<class name="testNG.SuiteExample"></class> 
+			<exclude> is not mandatory one -->
